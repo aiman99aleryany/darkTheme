@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.classic {
+  $wrapper: &;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
+
+  &__box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+  &__box2 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+  }
+
+  &--dark {
+    background-color: rgb(36, 9, 36);
+    #{$wrapper}__box1 {
+      background-color: grey;
+    }
+
+    #{$wrapper}__box2 {
+      background-color: black;
+    }
+  }
+}
